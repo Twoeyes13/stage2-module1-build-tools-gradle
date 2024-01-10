@@ -1,4 +1,11 @@
 //add everything here
+group('com.epam')
+version('1.0.0')
+
+repositories {
+// provide repository, where required dependencies are located
+    mavenCentral()
+}
 
 test {
     useJUnitPlatform()
