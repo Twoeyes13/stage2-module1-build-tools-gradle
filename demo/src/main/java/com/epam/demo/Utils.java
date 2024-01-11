@@ -7,7 +7,7 @@ public class Utils {
     public static boolean isAllPositiveNumbers(List<String> args) {
         //magic happens here
         for (String el : args) {
-            if (Integer.parseInt(el) < 0) return false;
+            if (Double.parseDouble(el) < 0 || el.isEmpty())  return false;
         }
         return true;
     }
