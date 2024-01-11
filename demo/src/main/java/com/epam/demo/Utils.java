@@ -8,7 +8,9 @@ public class Utils {
         //magic happens here
         for (String el : args) {
             if (el.isEmpty() || el == null)  return false;
-            if (Double.parseDouble(el) < 1) return false;
+            if (el.matches("-?\\d+(\\.\\d+)?")) {
+                if (Double.parseDouble(el) < 1) return false;
+            } else return false;
         }
         return true;
     }
